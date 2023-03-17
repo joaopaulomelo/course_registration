@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\KinshipType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(KinshipTypesSeeder::class);
         $this->call(ProfileSeeder::class);
         $this->call(ScholarshipStatusSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }

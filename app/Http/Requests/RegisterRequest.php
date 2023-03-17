@@ -26,8 +26,25 @@ class RegisterRequest extends FormRequest
     public function rules(Request $request)
     {
         return [
-            'email' => ['required', Rule::unique('users', 'email')->ignore($request->id_user)],
-            'password' => 'required'
+            'email' => ['required', 'email', Rule::unique('users', 'email')->ignore($request->id_user)],
+            'password' => 'required|max:11'
         ];
     }
+
+    /**
+    * Get the error messages for the defined validation rules.
+ *
+ * @return array<string, string>
+ */
+public function messages(): array
+{
+    return [
+        'email.required' => 'Favor preencher o email',
+        'email.unique' => 'Email informado ja cadastrado',
+        'email.email' => 'Email invalido!',
+        'password.required' => 'Favor preencher a senha',
+        'password.max' => 'Favor preencher a senha ate 11 caracteres',
+    ];
+}
+
 }
