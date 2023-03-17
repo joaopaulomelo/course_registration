@@ -17,3 +17,13 @@ You need to configure the .env file steps
 - composer update 
 - php artisan migrate --seed
 - php artisan serve
+
+## Graphical representation of the model
+
+- **[DER](https://drive.google.com/file/d/10bg6THkWKgrwDZwAzn--urg7xnyp9h8F/view?usp=share_link)** 
+
+## functionality
+
+- User registration
+- System authentication
+- user data registration
